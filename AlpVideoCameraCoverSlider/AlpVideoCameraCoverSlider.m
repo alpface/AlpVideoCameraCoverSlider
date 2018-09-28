@@ -18,6 +18,7 @@ static CGFloat const kThumbDimension = 24.0;
 @property (nonatomic) UIImageView *rangeThumbView;
 
 @property (nonatomic) NSLayoutConstraint *rangeThumbViewLeftConstraint;
+@property (nonatomic) NSLayoutConstraint *rangeThumbViewWidthConstraint;
 @property (nonatomic) NSMutableDictionary *runtimeAttributes;
 @property (nonatomic) BOOL shouldCaptureRuntimeAttributes;
 
@@ -90,14 +91,11 @@ static CGFloat const kThumbDimension = 24.0;
     [rangeValue getValue:&range]; // 赋值给结构体
     NSNumber *value = runtimeAttributes[NSStringFromSelector(@selector(value))];
     
-    /*
-     Set min/max ranges before setting values.
-     */
     if (rangeValue) {
         self.range = range;
         self.value = AlpVideoCameraCoverSliderMaxRange(range);
     }
-    if(value) {
+    if (value) {
         self.value = value.doubleValue;
     }
 }
@@ -116,23 +114,31 @@ static CGFloat const kThumbDimension = 24.0;
     [super updateConstraints];
     
     CGFloat multiplier = self.range.location / self.value ;
-    CGFloat left = self.frame.size.width * multiplier - self.rangeThumbView.frame.size.width * 0.5;
-    left = MAX(0, MIN(self.frame.size.width-self.rangeThumbView.frame.size.width, left));
-    self.rangeThumbViewLeftConstraint.constant = left;
+    CGFloat rangeLeft = self.frame.size.width * multiplier;
+    self.rangeThumbViewLeftConstraint.constant = rangeLeft;
+    CGFloat rangeMultiplier = self.range.length / self.value;
+    CGFloat rangeWidth = rangeMultiplier * self.frame.size.width;
+    
+    self.rangeThumbViewWidthConstraint.constant = rangeWidth;
 }
 
 - (void)layoutSubviews {
     [super layoutSubviews];
+    
     CGFloat multiplier = self.range.location / self.value ;
-    CGFloat left = self.frame.size.width * multiplier - self.rangeThumbView.frame.size.width * 0.5;
-    left = MAX(0, MIN(self.frame.size.width-self.rangeThumbView.frame.size.width, left));
-    self.rangeThumbViewLeftConstraint.constant = left;
+    CGFloat rangeLeft = self.frame.size.width * multiplier;
+    self.rangeThumbViewLeftConstraint.constant = rangeLeft;
+    
+    CGFloat rangeMultiplier = self.range.length / self.value;
+    CGFloat rangeWidth = rangeMultiplier * self.frame.size.width;
+    
+    self.rangeThumbViewWidthConstraint.constant = rangeWidth;
 }
 
 - (void)tintColorDidChange {
     [super tintColorDidChange];
     
-    [self updateThumbImages];
+//    [self updateThumbImages];
 }
 
 - (void)setup {
@@ -143,19 +149,21 @@ static CGFloat const kThumbDimension = 24.0;
     
     self.rangeThumbView = [[UIImageView alloc] initWithImage:nil];
     self.rangeThumbView.translatesAutoresizingMaskIntoConstraints = NO;
+    self.rangeThumbView.backgroundColor = [UIColor redColor];
     
     [self addSubview:self.rangeThumbView];
     
     [self.rangeThumbView.topAnchor constraintGreaterThanOrEqualToAnchor:self.topAnchor].active = YES;
     [self.rangeThumbView.bottomAnchor constraintGreaterThanOrEqualToAnchor:self.bottomAnchor].active = YES;
     [self.rangeThumbView.centerYAnchor constraintEqualToAnchor:self.centerYAnchor].active = YES;
-    
+    self.rangeThumbViewWidthConstraint = [self.rangeThumbView.widthAnchor constraintEqualToConstant:0.0];
+    self.rangeThumbViewWidthConstraint.active = YES;
     
     self.rangeThumbViewLeftConstraint = [self.rangeThumbView.leadingAnchor constraintEqualToAnchor:self.leadingAnchor];
     
     self.rangeThumbViewLeftConstraint.active = YES;
     
-    [self updateThumbImages];
+//    [self updateThumbImages];
 }
 
 #pragma mark - Accessors
@@ -203,13 +211,37 @@ static CGFloat const kThumbDimension = 24.0;
 - (void)updateRangeWithTouch:(UITouch *)touch {
     // 当前手指所在的位置
     CGPoint point = [touch locationInView:self];
+    // 让thumb的中心点x = 手指所在的点
     CGFloat currentX = point.x;
     // 限制手指拖动的最左侧和最后侧
     currentX = MAX(self.rangeThumbView.frame.size.width*0.5, MIN(currentX, self.frame.size.width - self.rangeThumbView.frame.size.width * 0.5));
     // rangeThumbView 的左侧距离父控件的约束值
     CGFloat rangThumbViewLeft = currentX - self.rangeThumbView.frame.size.width * 0.5;
+    self.rangeThumbViewLeftConstraint.constant = rangThumbViewLeft;
+
     CGFloat multiplier = rangThumbViewLeft / self.frame.size.width;
     _range.location = multiplier * self.value;
+    NSLog(@"%2.f", _range.location);
+}
+
+
+//- (void)updateRangeWithTouch:(UITouch *)touch {
+//    // 当前手指所在的位置
+//    CGPoint point = [touch locationInView:self];
+//    CGFloat currentX = point.x;
+//    // 限制手指拖动的最左侧和最后侧
+//    currentX = MAX(self.rangeThumbView.frame.size.width*0.5, MIN(currentX, self.frame.size.width - self.rangeThumbView.frame.size.width * 0.5));
+//    // rangeThumbView 的左侧距离父控件的约束值
+//    CGFloat rangThumbViewLeft = currentX - self.rangeThumbView.frame.size.width * 0.5;
+//    self.rangeThumbViewLeftConstraint.constant = rangThumbViewLeft;
+//
+//    CGFloat multiplier = rangThumbViewLeft / self.frame.size.width;
+//    _range.location = multiplier * self.value;
+//    NSLog(@"%2.f", _range.location);
+//}
+
+- (void)updateWithRange:(AlpVideoCameraCoverSliderRange)range {
+    
 }
 
 #pragma mark - Asset generator

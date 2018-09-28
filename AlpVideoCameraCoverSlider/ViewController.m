@@ -25,11 +25,11 @@
     _rangeSlider.backgroundColor = [UIColor yellowColor];
     _rangeSlider.translatesAutoresizingMaskIntoConstraints = NO;
     [NSLayoutConstraint constraintWithItem:_rangeSlider attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeCenterY multiplier:1.0 constant:0.0].active = YES;
-    [NSLayoutConstraint constraintWithItem:_rangeSlider attribute:NSLayoutAttributeLeading   relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeLeading multiplier:1.0 constant:20.0].active = YES;
-    [NSLayoutConstraint constraintWithItem:_rangeSlider attribute:NSLayoutAttributeTrailing   relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTrailing multiplier:1.0 constant:-20.0].active = YES;
-//    [NSLayoutConstraint constraintWithItem:_rangeSlider attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:100.0].active = YES;
+    [NSLayoutConstraint constraintWithItem:_rangeSlider attribute:NSLayoutAttributeLeading   relatedBy:NSLayoutRelationEqual toItem:self.view.safeAreaLayoutGuide attribute:NSLayoutAttributeLeading multiplier:1.0 constant:20.0].active = YES;
+    [NSLayoutConstraint constraintWithItem:_rangeSlider attribute:NSLayoutAttributeTrailing   relatedBy:NSLayoutRelationEqual toItem:self.view.safeAreaLayoutGuide attribute:NSLayoutAttributeTrailing multiplier:1.0 constant:-20.0].active = YES;
+    [NSLayoutConstraint constraintWithItem:_rangeSlider attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:100.0].active = YES;
     self.rangeSlider.value = 8000.0;
-    self.rangeSlider.range = AlpVideoCameraCoverSliderMakeRange(0.0, 500.0);
+    self.rangeSlider.range = AlpVideoCameraCoverSliderMakeRange(500.0, 1000.0);
     [self.rangeSlider addTarget:self action:@selector(valueChanged:) forControlEvents:UIControlEventValueChanged];
     
     self.rangeLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height - 100.0, self.view.frame.size.width, 20.0)];
