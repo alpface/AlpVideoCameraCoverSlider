@@ -208,7 +208,7 @@ static CGFloat const kThumbDimension = 24.0;
     currentX = MAX(self.rangeThumbView.frame.size.width*0.5, MIN(currentX, self.frame.size.width - self.rangeThumbView.frame.size.width * 0.5));
     // rangeThumbView 的左侧距离父控件的约束值
     CGFloat rangThumbViewLeft = currentX - self.rangeThumbView.frame.size.width * 0.5;
-    CGFloat multiplier = (rangThumbViewLeft + self.rangeThumbView.frame.size.width) / self.frame.size.width;
+    CGFloat multiplier = rangThumbViewLeft / self.frame.size.width;
     _range.location = multiplier * self.value;
 }
 
