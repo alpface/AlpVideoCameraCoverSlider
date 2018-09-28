@@ -1,0 +1,350 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D06E2E14215E2E0F00836936 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D06E2E13215E2E0F00836936 /* AppDelegate.m */; };
+		D06E2E17215E2E0F00836936 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D06E2E16215E2E0F00836936 /* ViewController.m */; };
+		D06E2E1A215E2E0F00836936 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D06E2E18215E2E0F00836936 /* Main.storyboard */; };
+		D06E2E1C215E2E1000836936 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D06E2E1B215E2E1000836936 /* Assets.xcassets */; };
+		D06E2E1F215E2E1000836936 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D06E2E1D215E2E1000836936 /* LaunchScreen.storyboard */; };
+		D06E2E22215E2E1000836936 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D06E2E21215E2E1000836936 /* main.m */; };
+		D06E2E2A215E2E8A00836936 /* AlpVideoCameraCoverSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = D06E2E29215E2E8A00836936 /* AlpVideoCameraCoverSlider.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D06E2E0F215E2E0F00836936 /* AlpVideoCameraCoverSlider.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlpVideoCameraCoverSlider.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D06E2E12215E2E0F00836936 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D06E2E13215E2E0F00836936 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D06E2E15215E2E0F00836936 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		D06E2E16215E2E0F00836936 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		D06E2E19215E2E0F00836936 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D06E2E1B215E2E1000836936 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D06E2E1E215E2E1000836936 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D06E2E20215E2E1000836936 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D06E2E21215E2E1000836936 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D06E2E28215E2E8A00836936 /* AlpVideoCameraCoverSlider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlpVideoCameraCoverSlider.h; sourceTree = "<group>"; };
+		D06E2E29215E2E8A00836936 /* AlpVideoCameraCoverSlider.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlpVideoCameraCoverSlider.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D06E2E0C215E2E0F00836936 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D06E2E06215E2E0E00836936 = {
+			isa = PBXGroup;
+			children = (
+				D06E2E11215E2E0F00836936 /* AlpVideoCameraCoverSlider */,
+				D06E2E10215E2E0F00836936 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D06E2E10215E2E0F00836936 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D06E2E0F215E2E0F00836936 /* AlpVideoCameraCoverSlider.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D06E2E11215E2E0F00836936 /* AlpVideoCameraCoverSlider */ = {
+			isa = PBXGroup;
+			children = (
+				D06E2E12215E2E0F00836936 /* AppDelegate.h */,
+				D06E2E13215E2E0F00836936 /* AppDelegate.m */,
+				D06E2E15215E2E0F00836936 /* ViewController.h */,
+				D06E2E16215E2E0F00836936 /* ViewController.m */,
+				D06E2E18215E2E0F00836936 /* Main.storyboard */,
+				D06E2E1B215E2E1000836936 /* Assets.xcassets */,
+				D06E2E1D215E2E1000836936 /* LaunchScreen.storyboard */,
+				D06E2E20215E2E1000836936 /* Info.plist */,
+				D06E2E21215E2E1000836936 /* main.m */,
+				D06E2E28215E2E8A00836936 /* AlpVideoCameraCoverSlider.h */,
+				D06E2E29215E2E8A00836936 /* AlpVideoCameraCoverSlider.m */,
+			);
+			path = AlpVideoCameraCoverSlider;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D06E2E0E215E2E0F00836936 /* AlpVideoCameraCoverSlider */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D06E2E25215E2E1000836936 /* Build configuration list for PBXNativeTarget "AlpVideoCameraCoverSlider" */;
+			buildPhases = (
+				D06E2E0B215E2E0F00836936 /* Sources */,
+				D06E2E0C215E2E0F00836936 /* Frameworks */,
+				D06E2E0D215E2E0F00836936 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AlpVideoCameraCoverSlider;
+			productName = AlpVideoCameraCoverSlider;
+			productReference = D06E2E0F215E2E0F00836936 /* AlpVideoCameraCoverSlider.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D06E2E07215E2E0E00836936 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = xiaoyuan;
+				TargetAttributes = {
+					D06E2E0E215E2E0F00836936 = {
+						CreatedOnToolsVersion = 10.0;
+					};
+				};
+			};
+			buildConfigurationList = D06E2E0A215E2E0E00836936 /* Build configuration list for PBXProject "AlpVideoCameraCoverSlider" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D06E2E06215E2E0E00836936;
+			productRefGroup = D06E2E10215E2E0F00836936 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D06E2E0E215E2E0F00836936 /* AlpVideoCameraCoverSlider */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D06E2E0D215E2E0F00836936 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D06E2E1F215E2E1000836936 /* LaunchScreen.storyboard in Resources */,
+				D06E2E1C215E2E1000836936 /* Assets.xcassets in Resources */,
+				D06E2E1A215E2E0F00836936 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D06E2E0B215E2E0F00836936 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D06E2E17215E2E0F00836936 /* ViewController.m in Sources */,
+				D06E2E2A215E2E8A00836936 /* AlpVideoCameraCoverSlider.m in Sources */,
+				D06E2E22215E2E1000836936 /* main.m in Sources */,
+				D06E2E14215E2E0F00836936 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D06E2E18215E2E0F00836936 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D06E2E19215E2E0F00836936 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D06E2E1D215E2E1000836936 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D06E2E1E215E2E1000836936 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D06E2E23215E2E1000836936 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D06E2E24215E2E1000836936 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D06E2E26215E2E1000836936 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NKW67GFDHM;
+				INFOPLIST_FILE = AlpVideoCameraCoverSlider/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.alpface.AlpVideoCameraCoverSlider;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D06E2E27215E2E1000836936 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NKW67GFDHM;
+				INFOPLIST_FILE = AlpVideoCameraCoverSlider/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.alpface.AlpVideoCameraCoverSlider;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D06E2E0A215E2E0E00836936 /* Build configuration list for PBXProject "AlpVideoCameraCoverSlider" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D06E2E23215E2E1000836936 /* Debug */,
+				D06E2E24215E2E1000836936 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D06E2E25215E2E1000836936 /* Build configuration list for PBXNativeTarget "AlpVideoCameraCoverSlider" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D06E2E26215E2E1000836936 /* Debug */,
+				D06E2E27215E2E1000836936 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D06E2E07215E2E0E00836936 /* Project object */;
+}
