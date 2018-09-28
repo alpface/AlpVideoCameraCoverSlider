@@ -93,10 +93,10 @@ static CGFloat const kThumbDimension = 24.0;
     
     if (rangeValue) {
         self.range = range;
-        self.value = AlpVideoCameraCoverSliderMaxRange(range);
+        self.maximumValue = AlpVideoCameraCoverSliderMaxRange(range);
     }
     if (value) {
-        self.value = value.doubleValue;
+        self.maximumValue = value.doubleValue;
     }
 }
 
@@ -113,10 +113,10 @@ static CGFloat const kThumbDimension = 24.0;
 - (void)updateConstraints {
     [super updateConstraints];
     
-    CGFloat multiplier = self.range.location / self.value ;
+    CGFloat multiplier = self.range.location / self.maximumValue ;
     CGFloat rangeLeft = self.frame.size.width * multiplier;
     self.rangeThumbViewLeftConstraint.constant = rangeLeft;
-    CGFloat rangeMultiplier = self.range.length / self.value;
+    CGFloat rangeMultiplier = self.range.length / self.maximumValue;
     CGFloat rangeWidth = rangeMultiplier * self.frame.size.width;
     
     self.rangeThumbViewWidthConstraint.constant = rangeWidth;
@@ -125,11 +125,11 @@ static CGFloat const kThumbDimension = 24.0;
 - (void)layoutSubviews {
     [super layoutSubviews];
     
-    CGFloat multiplier = self.range.location / self.value ;
+    CGFloat multiplier = self.range.location / self.maximumValue ;
     CGFloat rangeLeft = self.frame.size.width * multiplier;
     self.rangeThumbViewLeftConstraint.constant = rangeLeft;
     
-    CGFloat rangeMultiplier = self.range.length / self.value;
+    CGFloat rangeMultiplier = self.range.length / self.maximumValue;
     CGFloat rangeWidth = rangeMultiplier * self.frame.size.width;
     
     self.rangeThumbViewWidthConstraint.constant = rangeWidth;
@@ -144,7 +144,7 @@ static CGFloat const kThumbDimension = 24.0;
 - (void)setup {
     
     _range = AlpVideoCameraCoverSliderMakeRange(0, 0.2);
-    _value = 1;
+    _maximumValue = 1;
     
     
     self.rangeThumbView = [[UIImageView alloc] initWithImage:nil];
@@ -170,17 +170,17 @@ static CGFloat const kThumbDimension = 24.0;
 #pragma mark -
 
 
-- (void)setValue:(CGFloat)value {
+- (void)setMaximumValue:(CGFloat)maximumValue {
     if(self.shouldCaptureRuntimeAttributes) {
-        self.runtimeAttributes[NSStringFromSelector(@selector(value))] = @(value);
+        self.runtimeAttributes[NSStringFromSelector(@selector(value))] = @(maximumValue);
         return;
     }
     
-    if( fabs(_value) < FLT_EPSILON ) {
+    if( fabs(_maximumValue) < FLT_EPSILON ) {
         return;
     }
     
-    _value = value;
+    _maximumValue = maximumValue;
     [self setNeedsUpdateConstraints];
 }
 
@@ -220,7 +220,7 @@ static CGFloat const kThumbDimension = 24.0;
     self.rangeThumbViewLeftConstraint.constant = rangThumbViewLeft;
 
     CGFloat multiplier = rangThumbViewLeft / self.frame.size.width;
-    _range.location = multiplier * self.value;
+    _range.location = multiplier * self.maximumValue;
     NSLog(@"%2.f", _range.location);
 }
 

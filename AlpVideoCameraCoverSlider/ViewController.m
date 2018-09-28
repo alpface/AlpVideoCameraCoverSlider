@@ -28,7 +28,7 @@
     [NSLayoutConstraint constraintWithItem:_rangeSlider attribute:NSLayoutAttributeLeading   relatedBy:NSLayoutRelationEqual toItem:self.view.safeAreaLayoutGuide attribute:NSLayoutAttributeLeading multiplier:1.0 constant:20.0].active = YES;
     [NSLayoutConstraint constraintWithItem:_rangeSlider attribute:NSLayoutAttributeTrailing   relatedBy:NSLayoutRelationEqual toItem:self.view.safeAreaLayoutGuide attribute:NSLayoutAttributeTrailing multiplier:1.0 constant:-20.0].active = YES;
     [NSLayoutConstraint constraintWithItem:_rangeSlider attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:100.0].active = YES;
-    self.rangeSlider.value = 8000.0;
+    self.rangeSlider.maximumValue = 8000.0;
     self.rangeSlider.range = AlpVideoCameraCoverSliderMakeRange(500.0, 1000.0);
     [self.rangeSlider addTarget:self action:@selector(valueChanged:) forControlEvents:UIControlEventValueChanged];
     
@@ -47,7 +47,7 @@
 }
 
 - (void)updateLabels {
-    self.valueLabel.text = [NSString stringWithFormat:@"总大小:%.2f", self.rangeSlider.value];
+    self.valueLabel.text = [NSString stringWithFormat:@"总大小:%.2f", self.rangeSlider.maximumValue];
     self.rangeLabel.text = [NSString stringWithFormat:@"范围:location:%.2f, length:%.2f", self.rangeSlider.range.location, self.rangeSlider.range.length];
     
 }

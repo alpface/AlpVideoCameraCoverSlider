@@ -30,7 +30,7 @@ NS_INLINE CGFloat AlpVideoCameraCoverSliderMaxRange(AlpVideoCameraCoverSliderRan
 IB_DESIGNABLE
 @interface AlpVideoCameraCoverSlider : UIControl
 
-@property (nonatomic) IBInspectable CGFloat value;
+@property (nonatomic) IBInspectable CGFloat maximumValue;
 @property (nonatomic) IBInspectable UIImage *thumbImage;
 @property (nonatomic) IBInspectable AlpVideoCameraCoverSliderRange range;
 
